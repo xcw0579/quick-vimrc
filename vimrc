@@ -43,7 +43,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 
 " ==>> 代码自动补全的插件，需要先install一些东西来支持。
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " 记得安装好之后就去~/.vim/bundle/YouCompleteMe/，接下来仍需要做的是：
 " sudo apt-get install build-essential cmake	c的make工具
 " sudo apt-get install python-dev	确定你有python，因为安装配置的需要
@@ -158,31 +158,30 @@ Bundle 'EasyMotion'
 
 " ==>> 字符串查找(在查找之前先在终端中加入如下命令，直接用cr即可创建数据库文件)
 " alias cr='ctags -R --fields=+IS && cscope -Rbkq' 添加了别名
-Bundle 'cscope.vim'
-	nnoremap <leader>fa :call cscope#findInteractive(expand('<cword>'))<CR>
-    nnoremap <leader>l  :call ToggleLocationList()<CR>
-	" s: Find this C symbol
-	nnoremap  <leader>fs :call cscope#find('s', expand('<cword>'))<CR>
-	" g: Find this definition
-	nnoremap  <leader>fg :call cscope#find('g', expand('<cword>'))<CR>
-	" d: Find functions called by this function
-	nnoremap  <leader>fd :call cscope#find('d', expand('<cword>'))<CR>
-	" c: Find functions calling this function
-	nnoremap  <leader>fc :call cscope#find('c', expand('<cword>'))<CR>
-	" t: Find this text string
-	nnoremap  <leader>ft :call cscope#find('t', expand('<cword>'))<CR>
-	" e: Find this egrep pattern
-	nnoremap  <leader>fe :call cscope#find('e', expand('<cword>'))<CR>
-	" f: Find this file
-	nnoremap  <leader>ff :call cscope#find('f', expand('<cword>'))<CR>
-	" i: Find files #including this file
-	nnoremap  <leader>fi :call cscope#find('i', expand('<cword>'))<CR>
-	let g:cscope_ignore_files = '\.Z$\|\.zip$\|\.zipx$\|\.lib'	" 忽视一些后缀
-	" let g:cscope_preload_path="\~\/home\/xiao\/桌面/"
+" Bundle 'cscope.vim'
+	" nnoremap <leader>fa :call cscope#findInteractive(expand('<cword>'))<CR>
+    " nnoremap <leader>l  :call ToggleLocationList()<CR>
+	" " s: Find this C symbol
+	" nnoremap  <leader>fs :call cscope#find('s', expand('<cword>'))<CR>
+	" " g: Find this definition
+	" nnoremap  <leader>fg :call cscope#find('g', expand('<cword>'))<CR>
+	" " d: Find functions called by this function
+	" nnoremap  <leader>fd :call cscope#find('d', expand('<cword>'))<CR>
+	" " c: Find functions calling this function
+	" nnoremap  <leader>fc :call cscope#find('c', expand('<cword>'))<CR>
+	" " t: Find this text string
+	" nnoremap  <leader>ft :call cscope#find('t', expand('<cword>'))<CR>
+	" " e: Find this egrep pattern
+	" nnoremap  <leader>fe :call cscope#find('e', expand('<cword>'))<CR>
+	" " f: Find this file
+	" nnoremap  <leader>ff :call cscope#find('f', expand('<cword>'))<CR>
+	" " i: Find files #including this file
+	" nnoremap  <leader>fi :call cscope#find('i', expand('<cword>'))<CR>
+	" let g:cscope_ignore_files = '\.Z$\|\.zip$\|\.zipx$\|\.lib'	" 忽视一些后缀
 
-" ==>> 辅助cscope的，能自动加载cscope.out文件，若没找到，还能自动往上层目录
-Bundle 'autoload_cscope.vim'
-let g:autocscope_menus=0
+" " ==>> 辅助cscope的，能自动加载cscope.out文件，若没找到，还能自动往上层目录
+" Bundle 'autoload_cscope.vim'
+" let g:autocscope_menus=0
 
 
 
@@ -239,10 +238,10 @@ map <F3> za
 " map <F4> zA
 
 " 可视模式下，ctrl+c为复制。注意需要apt-get安装vim-nox和vim-gnome。
-vmap <c-c> "+y
+" vmap <c-c> "+y
 "
 " 任何模式下，ctrl+v为粘贴。两个安装项同上。
-map <c-v> "+p
+" map <c-v> "+p
 
 " 在用的主题
 colorscheme molokai
@@ -263,7 +262,7 @@ set nu
 
 set history=100000
 
-" tab缩进为4个空格
+" tab缩进为4个空格大小
 set tabstop=4
 
 " 右下角显示当前列号
@@ -272,7 +271,9 @@ set ruler
 " 自动缩进的大小为4空格
 set shiftwidth=4
 
-set smarttab
+" set smarttab
+" 空格代替tab
+set expandtab
 
 " 开启缩进
 set cindent
