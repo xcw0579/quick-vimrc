@@ -18,24 +18,27 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
+" 辅助使用git
+" Plugin 'tpope/vim-fugitive'
 
 " ====================如果插件来自vim-scripts，直接写插件名就行了===========================
-" plugin from http://vim-scripts.org/vim/scripts.html  vim-scripts的库，必要的
-Plugin 'L9'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
 
 " ====================如果插件是自己本地的git仓库，写写地址=================================
 " Git plugin not hosted on GitHub 
-Plugin 'git://git.wincent.com/command-t.git'
+" Plugin 'git://git.wincent.com/command-t.git'
 
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" 写html用的插件
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-" Avoid a name conflict with L9
+" Avoid a name conflict with L9  
 " Plugin 'user/L9', {'name': 'newL9'}
 
 
@@ -150,6 +153,8 @@ Bundle 'The-NERD-Commenter'
 " ==>> 搜索工具
 Bundle 'EasyMotion'
 	" 一般无需设置
+    " 按词往上或下:     \\b \\w 
+    " 按行往上或下:     \\j \\k
 
 
 
@@ -300,9 +305,9 @@ set foldlevel=99
 " 在状态栏显示正在输入的命令
 set showcmd
 
-" 自动往上层目录查找tags文件
+" 自动往上层目录查找tags文件(指令$ctags -R    找定义ctrl+] 回跳ctrl+t)
 set tags=tags;
 
-" 也是辅助ctags用的
-set autochdir
+" 用vim直接打开一个文件时会自动切到该文件目录下
+" set autochdir
 
