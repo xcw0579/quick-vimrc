@@ -66,6 +66,9 @@ Plugin 'powerline/fonts'
 " 目前是:ubuntu mono derivative powline 13
 
 
+" ==>> 主题包，支持airline用的
+" 在下面的 let g:airline_theme="bubblegum"就是了
+Plugin 'vim-airline/vim-airline-themes'
 
 
 
